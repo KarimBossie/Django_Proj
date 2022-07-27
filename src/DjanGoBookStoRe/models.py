@@ -6,11 +6,11 @@ from django.db import models
 
 class City(models.Model):
     name = models.CharField(
-        verbose_name="city's name",
+        verbose_name="City's name",
         max_length=25
         )
     description = models.TextField(
-        verbose_name="city's name",
+        verbose_name="City's description",
         blank=True,
         null=True
     )
