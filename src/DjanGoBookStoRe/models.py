@@ -14,3 +14,5 @@ class City(models.Model):
         blank=True,
         null=True
     )
+    def __str__(self) -> str:
+        return str(self.pk) + ". " + self.name
