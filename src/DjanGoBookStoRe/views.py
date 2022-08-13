@@ -3,7 +3,7 @@ from . import models
 
 # Create your views here.
 
-def DjanGoBookStoRe_view(request):
+def Regions_Cities_view(request):
     out = '<ul>'
     regions = models.Region.objects.all()
     for reg in regions:
