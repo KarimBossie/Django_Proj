@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karim's Online BookStoRe</title>
+</head>
+<body>
+    <h1 class = "text-center text-5xl">{{ Books.title }}</h1>
+    <p>{{ Books.cover_img }}</p>
+    <p>{{ Books.author }}</p>
+    {% for categorya in category %}
+    <p> {{ categorya }}</p>
+    {% endfor %}
+    <p>{{ Books.category}}</p>
+    <p>{{ Books.summary}}</p>
+    <p>{{ Books.pagecount}}</p>
+    <p>{{ Books.price}}</p>
+
+    <form method="POST" action="{% url 'book.review' %}">
+        {% csrf_token %}
+        <textarea class='border rounded p-2' name='Review' placeholder="Please write a review about this book" id ='' cols="35" rows="15"></textarea>
+        <button type="submit">Submit a review</button>
+    </form>
+
+</body>
+</html>

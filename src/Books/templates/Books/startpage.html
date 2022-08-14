@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karim's Online BookStoRe</title>
+</head>
+<body>
+    <h1 class = "text-center text-5xl">Welcome to Karim's Online BookStoRe</h1>
+
+    <div class = "grid grid-cols-4 gap-4"> 
+            {% for book in Books %}
+            <a href ='/book/{{book.id}}' class = 'justify-self-center text-center my-4' target = '_blank'
+        <div class = "flex justify-center">
+            {{ book.title }}
+        </a>
+        </div>
+            {% endfor %}
+    </div>
+
+
+</body>
+</html>
