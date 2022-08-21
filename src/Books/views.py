@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from . import models
 from Books.models import Book, Review, Author, Category
 from django.views.generic import ListView
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -25,7 +26,8 @@ def author(request, author):
     return render(request, 'Books/book_list.html', context)
 
 def review(request, id):
-    reviewsofthebook = request.POST['review']
-    newReview = Review(reviewsofthebook=reviewsofthebook, book_id=id)
-    newReview.save()
+    if request.user.is_authenticated:
+        reviewsofthebook = request.POST['review']
+        newReview = Review(reviewsofthebook=reviewsofthebook, book_id=id, user=request.user)
+        newReview.save()
     return redirect('/book')
