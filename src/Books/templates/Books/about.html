@@ -1,68 +1,16 @@
 {% extends 'base.html' %} 
 
-{% block title %} Karim's BookStoRe - Books {% endblock%} 
+{% block title %} Karim's BookStoRe - Books {% endblock %} 
 
 
 {% block content %}
 
-
-<div class="card mx-auto " style="width: 17rem; height:30.5rem;">
-    <a href="/book/1" target="_blank" style="text-decoration:none">
-        <p style="color: rgb(79, 79, 79) ; text-align: center; font-size:18px ; "><b>" {{book.title}} "</b></p>
-        <img src="https://bookoutlet.com/api/image?url=https://images.bookoutlet.com/covers/large/isbn978154/9781547604661-l.jpg&amp;w=640&amp;q=75" width="245" style="padding-left: 23px; ">
-    </a>
-    <div style="border-style: dotted; border-color:rgb(240, 240, 240); border-radius:5px; margin-top: 27px;">
-        <button data-product="1" data-action="add" style="opacity: 0.9; background-color: #474747;" class="btn btn-success add-btn update-cart"> Add to Cart</button>
-        <a href="/book/{{book.id}}" class="btn btn-primary" style="opacity: 0.9; ">View the book</a>
-        <h5 style="display: inline-block ; float: right; color:#4a4a4a;">{{book.price}} BYN </h5>
-    </div>
+<div class="container">
+    <h1>About us:</h1>
+    <p>Welcome to Karim's BookStoRe!</p>
+    <br>
+    <p>We are a small startup company that came new to the book market.</p>
+    <p>Our goal is to make sure our customers are fully satisfied with our books that are on sale. </p>
+    <p>Join us today in the adventure of reading!</p>
 </div>
-
-
-<div class="col" style="padding:29px; ">
-    <div class="card mx-auto " style="width: 17rem; height:30.5rem;">
-        <a href="/book/2" target="_blank" style="text-decoration:none">
-            <p style="color: rgb(79, 79, 79) ; text-align: center; font-size:18px ; "><b>" Pack Up the Moon "</b></p>
-            <img src="https://bookoutlet.com/api/image?url=https://images.bookoutlet.com/covers/large/isbn978045/9780451489487-l.jpg&amp;w=640&amp;q=75" width="245" style="padding-left: 23px; ">
-        </a>
-        <div style="border-style: dotted; border-color:rgb(240, 240, 240); border-radius:5px; margin-top: 27px;">
-            <button data-product="2" data-action="add" style="opacity: 0.9; background-color: #474747;" class="btn btn-success add-btn update-cart"> Add to Cart</button>
-            <a href="/book/2" class="btn btn-primary" style="opacity: 0.9; "> View</a>
-            <h5 style="display: inline-block ; float: right; color:#4a4a4a;">11 BYN</h5>
-        </div>
-    </div> 
-
-
-
-
-
-
-    <div class="col" style="padding:29px; ">
-        <div class="card mx-auto " style="width: 17rem; height:30.5rem;">
-            <a href="/book/2" target="_blank" style="text-decoration:none">
-                <p style="color: rgb(79, 79, 79) ; text-align: center; font-size:18px ; "><b>" Pack Up the Moon "</b></p>
-                <img src="https://bookoutlet.com/api/image?url=https://images.bookoutlet.com/covers/large/isbn978045/9780451489487-l.jpg&amp;w=640&amp;q=75" width="245" style="padding-left: 23px; ">
-            </a>
-            <div style="border-style: dotted; border-color:rgb(240, 240, 240); border-radius:5px; margin-top: 27px;">
-                <button data-product="2" data-action="add" style="opacity: 0.9; background-color: #474747;" class="btn btn-success add-btn update-cart"> Add to Cart</button>
-                <a href="/book/2" class="btn btn-primary" style="opacity: 0.9; "> View</a>
-                <h5 style="display: inline-block ; float: right; color:#4a4a4a;">11 BYN</h5>
-            </div>
-        </div> 
-    </div>
-
-
-</div>
-<div class="col" style="padding:29px; ">
-    <div class="card mx-auto " style="width: 17rem; height:30.5rem;">
-        <a href="/book/3" target="_blank" style="text-decoration:none">
-            <p style="color: rgb(79, 79, 79) ; text-align: center; font-size:18px ; "><b>" You Are Enough "</b></p>
-            <img src="https://bookoutlet.com/api/image?url=https://images.bookoutlet.com/covers/large/isbn978006/9780062932570-l.jpg&amp;w=640&amp;q=75" width="245" style="padding-left: 23px; ">
-        </a>
-        <div style="border-style: dotted; border-color:rgb(240, 240, 240); border-radius:5px; margin-top: 27px;">
-            <button data-product="3" data-action="add" style="opacity: 0.9; background-color: #474747;" class="btn btn-success add-btn update-cart"> Add to Cart</button>
-            <a href="/book/3" class="btn btn-primary" style="opacity: 0.9; "> View</a>
-            <h5 style="display: inline-block ; float: right; color:#4a4a4a;">25 BYN</h5>
-        </div>
-    </div> 
-</div>
+{% endblock %}

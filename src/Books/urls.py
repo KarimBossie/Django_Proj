@@ -7,5 +7,5 @@ urlpatterns = [
     path('<int:id>', views.show, name='book.show'),
     path('<int:id>/review', views.review, name='book.review'),
     path('<str:author>', views.author, name="author.books"),
-    #path('about', about.html, name='about'),
+    path('about/', views.about, name='about'),
 ]
