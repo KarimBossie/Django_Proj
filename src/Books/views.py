@@ -33,7 +33,6 @@ def review(request, id):
         newReview = Review(reviewsofthebook=reviewsofthebook, book_id=id, user=request.user)
         newReview.save()
     return redirect('/book')
-    
 
 def about(request):
     return render(request, 'Books/about.html')
@@ -43,7 +42,7 @@ def signup(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save()
-            user.refresh_from_db()  
+            user.refresh_from_db()
             user.save()
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=user.username, password=raw_password)
@@ -52,4 +51,3 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
-    
